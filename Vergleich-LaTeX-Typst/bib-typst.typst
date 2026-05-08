@@ -1,0 +1,37 @@
+// https://typst.app/docs/guides/guide-for-latex-users/
+
+// Document setup
+#set page(
+  paper: "a4",
+  margin: (top: 2.5cm, bottom: 2.5cm, left: 2.0cm, right: 2.0cm),
+  numbering: "1"
+)
+#set text(
+  lang: "de",
+  font: "New Computer Modern",
+  size: 10pt
+)
+
+// Styling
+#show heading.where(level: 1): it => [
+  #block(it.body, above: 1.75em, below: 1.25em)
+]
+#set par(justify: true)
+
+// Content
+
+- #cite(<Frank2019KonstruktionsorientierterForschungsansatz>, form: "full")
+- #cite(<Floyd1984SystematicLookPrototyping>, form: "full")
+- #cite(<Evans2003DomainDrivenDesign>, form: "full")
+- #cite(<Fowler1996AnalysisPatterns>, form: "full")
+- #cite(<Kres2024SPORTAnwendungssoftwareWebapplikation>, form: "full")
+- #cite(<WikipediaENTuringAward>, form: "full")
+
+// #lorem(600)
+
+#bibliography(
+  "bib.bib",
+  title: "Literatur",
+  full: false,
+  style: "springer-basic-author-date"
+)

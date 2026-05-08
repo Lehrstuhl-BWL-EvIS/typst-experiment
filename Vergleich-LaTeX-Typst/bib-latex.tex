@@ -1,0 +1,70 @@
+% Document setup
+\documentclass[a4paper]{article}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.0cm, right=2.0cm]{geometry}
+
+% Encoding / Umlaute
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Language
+\usepackage[ngerman]{babel}
+\selectlanguage{ngerman}
+
+% Quotations
+\usepackage[autostyle=true, babel=true, german=quotes, threshold=3]{csquotes}
+
+% Micro-typographic enhancements
+\usepackage[final]{microtype}
+
+% Spacing enhancements
+\usepackage{xspace}
+
+% Line spacing
+\usepackage{setspace}
+\setstretch{1.05}
+
+% Paragraph formatting
+\setlength{\parskip}{0.8em} % Space between paragraphs
+\setlength{\parindent}{0em} % Indentation at the beginning of paragraphs (optional)
+
+% Tables
+\usepackage{array}
+
+% Lists
+\usepackage{enumitem}
+
+% URLs
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle  = {Dokument},
+    pdfauthor = {Bastian Kres},
+}
+
+% Automatic line breaks for long URLs
+\PassOptionsToPackage{hyphens}{url}
+
+% Bibliography: BibTex
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+    natbib=true,
+    sorting=anyt
+]{biblatex}
+\addbibresource{bib.bib}
+
+\title{Bibliografie}
+
+\begin{document}
+
+\begin{itemize}
+    \item \fullcite{Frank2019KonstruktionsorientierterForschungsansatz}
+    \item \fullcite{Floyd1984SystematicLookPrototyping}
+    \item \fullcite{Evans2003DomainDrivenDesign}
+    \item \fullcite{Fowler1996AnalysisPatterns}
+    \item \fullcite{Kres2024SPORTAnwendungssoftwareWebapplikation}
+    \item \fullcite{WikipediaENTuringAward}
+\end{itemize}
+
+\printbibliography
+
+\end{document}
